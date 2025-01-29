@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+* {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+body {
+    background: #000;
+    color: white;
+}
+
+/* Add this to your CSS */
+.nav-link {
+    color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    text-transform: lowercase;
+    transition: 500ms ease;
+}
+
+.nav-link:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.nav-link.active {
+    color: #FFFFFF;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #F4DD8F;
+    transform: scaleX(1);
+    animation: underline 0.3s ease;
+}
+
+/* For mobile links */
+.mobile-nav-link.active {
+    color: #F4DD8F !important;
+    font-weight: 500;
+}
+
+@keyframes underline {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.gsap-marker-start,
+.gsap-marker-end,
+.gsap-marker-scroller-start,
+.gsap-marker-scroller-end {
+    display: none !important;
+}
