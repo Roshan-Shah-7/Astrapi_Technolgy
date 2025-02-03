@@ -8,11 +8,13 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+// import MouseTrail from './components/MouseTail';
 
 const App = () => {
     return (
         // Removed <Router> wrapper
         <main className='max-w-[1920px] m-auto'>
+            {/* <MouseTrail /> */}
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />

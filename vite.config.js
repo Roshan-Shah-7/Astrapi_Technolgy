@@ -5,5 +5,12 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [tailwindcss(), react()],
-    base: '/Astrapi_Technolgy/'
+    // base: '/Astrapi_Technolgy/'
+    optimizeDeps: {
+        include: [
+            'react',
+            'react-dom',
+            'react-router-dom',
+        ]
+    }
 })

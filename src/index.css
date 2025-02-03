@@ -5,10 +5,26 @@
     backface-visibility: hidden;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.c-scrollbar {
+    width: 8px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.c-scrollbar_thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
 body {
     background: #000;
     color: white;
 }
+
 
 /* Add this to your CSS */
 .nav-link {
@@ -34,7 +50,7 @@ body {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: #F4DD8F;
+    background-color: #F7CA79;
     transform: scaleX(1);
     animation: underline 0.3s ease;
 }
@@ -60,4 +76,17 @@ body {
 .gsap-marker-scroller-start,
 .gsap-marker-scroller-end {
     display: none !important;
+}
+
+/* Add to your global CSS */
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    height: 100vh;
 }
